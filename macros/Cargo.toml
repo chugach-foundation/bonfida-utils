@@ -1,19 +1,20 @@
 [package]
 name = "bonfida-macros"
-version = "0.2.9"
+version = "0.3.0"
 authors = ["ellttBen <elliott@bonfida.com>"]
 edition = "2018"
 description = "Bonfida-utils macros"
 license = "MIT"
 
 [features]
+name-service = ["spl-name-service"]
 
 [lib]
 proc-macro = true
 
 [dependencies]
-solana-program = "<1.16.0"
+solana-program = "<1.17"
 syn = "1.0"
 quote = "1.0"
 proc-macro2 = "1.0"
-spl-name-service = "0.2"
+spl-name-service = { version = "0.2", optional = true }

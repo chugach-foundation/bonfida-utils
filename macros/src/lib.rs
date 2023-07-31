@@ -1,6 +1,7 @@
 use proc_macro::TokenStream;
 mod accounts;
 mod borsh_size;
+#[cfg(feature = "name-service")]
 mod compute_record_hash;
 mod declare_id_with_central_state;
 mod wrapped_pod;
@@ -34,6 +35,7 @@ pub fn declare_id_with_central_state(item: TokenStream) -> TokenStream {
     declare_id_with_central_state::process(item.into()).into()
 }
 
+#[cfg(feature = "name-service")]
 #[proc_macro]
 pub fn compute_hashv(item: TokenStream) -> TokenStream {
     compute_record_hash::process(item.into()).into()
