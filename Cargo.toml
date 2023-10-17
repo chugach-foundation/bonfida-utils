@@ -1,3 +1,12 @@
 [workspace]
-members = ["utils", "macros", "autobindings", "autodoc", "autoproject", "benchviz", "cli", "test-utils"]
+members = [
+    "utils",
+    "macros",
+    "autobindings",
+    "autodoc",
+    "autoproject",
+    "benchviz",
+    "cli",
+    "test-utils",
+]
 exclude = ["TOBEREPLACEDBY_KEBAB"]
